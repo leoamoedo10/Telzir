@@ -12,9 +12,19 @@ function Home() {
         </div>
 
         <div className="buttons-container">
-          <Link to="" className="calculate">Calcular</Link>
+          <Link 
+            to="/calculate" 
+            className="calculate"
+          >
+            Calcular
+          </Link>
 
-          <Link to="" className="information">Informações</Link>
+          <Link 
+            to="/informations" 
+            className="information"
+          >
+            Informações
+          </Link>
         </div>
       </div>
     </div>
