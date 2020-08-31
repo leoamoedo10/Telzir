@@ -5,9 +5,7 @@ import './styles.css';
 
 function Calculate() {
   return(
-    <PageHeader>
-      
-    </PageHeader>
+    <PageHeader />
   );
 }
 
