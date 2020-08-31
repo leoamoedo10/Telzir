@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 
-  background: blueviolet;
+  background: var(--color-primary);
 
 }
 
@@ -15,24 +15,24 @@
 }
 
 .title-container {
-  color: thistle;
-  font-size: 40px;
+  color: var(--color-title-in-primary);
+  font-size: 60px;
 }
 
 .buttons-container {
   display: flex;
   justify-content: center;
-  margin: 3.2rem 0;
+  margin: 1rem 0;
 
 }
 
 .buttons-container a {
   width: 13rem;
-  height: 5.4rem;
+  height: 4.4rem;
   border-radius: 0.3rem;
-  margin-right: 1.6rem;
+  margin-right: 1rem;
   text-decoration: none;
-  color: aliceblue;
+  color: var(--color-button-text);
   font-size: 2.2rem;
   font-weight: bold;
 
@@ -43,9 +43,9 @@
 }
 
 .calculate {
-  background-color: darkseagreen;
+  background: var(--color-secundary);
 }
 
 .information {
-  background-color: darkmagenta;
+  background: var(--color-primary-lighter);
 }
