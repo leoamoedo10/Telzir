@@ -1,38 +1,6 @@
-.bg-help {
-  background: rgb(248, 245, 245);
-
+#page-informations {
+  margin: 3rem;
 }
-
-header {
-  width: 100%;
-  padding: 10px 0;
-}
-
-.bg-header-help {
-  background: #000;
-}  
-
-.header-menu-help {
-    width: 280px;
-    padding-top: 15px; 
-    float: right;
-}
-
-.header-menu-help ul {
-    margin: 0;
-    padding:0;
-}
-
-.header-menu-help ul li {
-    list-style: none;
-    color: #227cc2;
-    font-size:14px;
-    display:inline-block;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    padding:10px;
-}
-
 
 .text-plano-normal p {
   border-left: 8px solid #000;
@@ -40,14 +8,16 @@ header {
 }
 
 .text-plano-plus p {
-  border-left: 8px solid #fff;
-  color: #fff;
+  border-left: 8px solid #000;
+  color: #000;
   padding-left: 12px;
 }
 
+.container-table {
+  flex-direction: row;
+}
 
 .btn-introducao {
-
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
@@ -71,29 +41,25 @@ header {
 }
 
 
-.space-section {
-  margin-top: 80px;
+.section-container {
+  margin-top: 4rem;
 }
 
-.space-section .row h3{
+.section-container h2{
   padding:18px 0;
   text-align:center;
   font-weight:bold;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
-.space-section .space-title-normal {
-  margin-bottom: 30px;
-}
-
-.space-section .row h3::after{
+.section-container h2::after{
   content:"";
-  width: 90px;
+  width: 10rem;
   height: 3px;
   background: #000;
   display: block;
-  margin: 10px auto 0 auto;
+  margin: 0.2rem auto 0 auto;
 }
 
 .bg-plano-plus {
@@ -101,45 +67,23 @@ header {
   padding-bottom: 12px;
 }
 
-.title-plano-plus h3 {
-  color: #fff;
+.title-plano-plus h2 {
+  color: #000;
 }
 
-.bg-plano-plus .row h3::after {
-  background: #fff;
-}
-
-.title-plano-table {
-  color:#227cc2;
+.bg-plano-plus .row h2::after {
+  background: #000;
 }
 
 .bg-plano-table {
   padding-bottom: 35px;
 }
 
-.bg-plano-table .row h3::after {
+.bg-plano-table .row h2::after {
   background:#227cc2;
 }
 
 .bg-plano-table table {
-  background: #fff;
+  background: #000;
   color: #227cc2;
-}
-
-@media only screen and (max-width: 767px) {
-
-  .bg-size-mobile {
-      height: 120px;
-  }
-
-  .header-menu-help {
-      padding-top: 0;
-      width: 90px;
-  }
-
-  .header-menu-help ul li {
-      display:block;
-  }
-  
-
 }
