@@ -32,18 +32,6 @@
   letter-spacing: 0.1em;
 }
 
-.section-container h2::after{
-  content:"";
-  width: 10rem;
-  height: 3px;
-  background: #000;
-  display: block;
-  margin: 0.2rem auto 0 auto;
-}
-
-.title-plano-plus h2 {
-  color: #000;
-}
 
 .format-table {
   display: flex;
@@ -54,7 +42,7 @@
 .button {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 3rem;
 }
 
 .button a {
@@ -72,6 +60,6 @@
   justify-content: center;
 }
 
-.calculate {
-  background: var(--color-secundary);
+.button a.calculate:hover {
+  background: var(--color-secundary-dark);
 }
