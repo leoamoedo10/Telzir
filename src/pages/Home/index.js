@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+
 import "./styles.css";
 
 function Home() {
@@ -16,13 +19,15 @@ function Home() {
             to="/calculate" 
             className="calculate"
           >
+            <PlayArrowIcon style={{fontSize: 50}}/>
             Calcular
           </Link>
 
-          <Link 
-            to="/informations" 
+          <Link
+            to="/informations"
             className="information"
           >
+            <InfoOutlinedIcon style={{fontSize: 40}}/>
             Informações
           </Link>
         </div>

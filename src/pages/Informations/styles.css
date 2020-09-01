@@ -1,52 +1,31 @@
 #page-informations {
-  margin: 3rem;
-}
-
-.text-plano-normal p {
-  border-left: 8px solid #000;
-  padding-left: 12px;
-}
-
-.text-plano-plus p {
-  border-left: 8px solid #000;
-  color: #000;
-  padding-left: 12px;
+  margin: 4rem;
+  background-color: var(--color-background);
+  border-radius: 0.4rem;
 }
 
 .container-table {
   flex-direction: row;
-}
-
-.btn-introducao {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: .1em;
-  padding: 8px 12px;
-  width: 200px;
-  margin: 0 auto;
-  display:block;
-  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10rem;
+  margin-right: 10rem;
 
 }
 
-.btn-calcule {
-  border: 3px solid #227cc2;
-  color: #227cc2;
+.text-description p {
+  border-left: 0.3rem solid var(--color-primary-darker);
+  padding-left: 0.5rem;
+  font-size: 18px;
 }
-
-.btn-calcule-help:hover {
-  border: 3px solid #000;
-  color: #000;
-}
-
 
 .section-container {
   margin-top: 4rem;
+  padding: 2rem;
 }
 
 .section-container h2{
-  padding:18px 0;
+  padding:18px;
   text-align:center;
   font-weight:bold;
   text-transform: uppercase;
@@ -62,28 +41,37 @@
   margin: 0.2rem auto 0 auto;
 }
 
-.bg-plano-plus {
-  background: #227cc2;
-  padding-bottom: 12px;
-}
-
 .title-plano-plus h2 {
   color: #000;
 }
 
-.bg-plano-plus .row h2::after {
-  background: #000;
+.format-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.bg-plano-table {
-  padding-bottom: 35px;
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 }
 
-.bg-plano-table .row h2::after {
-  background:#227cc2;
+.button a {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--color-button-text);
+  font-size: 2rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.bg-plano-table table {
-  background: #000;
-  color: #227cc2;
+.calculate {
+  background: var(--color-secundary);
 }

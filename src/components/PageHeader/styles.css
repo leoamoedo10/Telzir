@@ -5,12 +5,11 @@
 }
 
 .page-header .top-bar-container {
-  margin: 10px 4rem;
+  margin: 2rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--color-title-in-primary);
-  padding: 1.6rem 0;
 }
 
 .button-home {
@@ -20,8 +19,8 @@
   color: var(--color-text-title);
 }
 
-.page-header {
+/* .page-header {
   width: 100%;
   margin: 0 auto;
   position: relative;
-}
+} */
