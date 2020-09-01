@@ -11,24 +11,58 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
 import "./styles.css";
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650
+    minWidth: 650,
   },
 });
 
-function createData(origin, destiny, time, planTalkPlus, priceWith, priceWithout) {
-  return { origin, destiny, time, planTalkPlus, priceWith, priceWithout};
+function createDataTableOne(origin, destiny, price) {
+  return { origin, destiny, price };
 }
 
-const rows = [
-  createData('011', '016', '20', 'FaleMais 30', 'R$ 0,0', 'R$ 38,00' ),
-  createData('011', '017', '80', 'FaleMais 60', 'R$ 37,40', 'R$ 136,00' ),
-  createData('018', '011', '200', 'FaleMais 120', 'R$ 167,20', 'R$ 380,00' ),
+const rowsTableOne = [
+  createDataTableOne("011", "016", "1,90"),
+  createDataTableOne("016", "011", "2,90"),
+  createDataTableOne("011", "017", "1,70"),
+  createDataTableOne("017", "011", "2,70"),
+  createDataTableOne("011", "018", "0,90"),
+  createDataTableOne("018", "011", "1,90"),
+];
+
+function createDataTableTwo(
+  origin,
+  destiny,
+  time,
+  planTalkPlus,
+  priceWith,
+  priceWithout
+) {
+  return { origin, destiny, time, planTalkPlus, priceWith, priceWithout };
+}
+
+const rowsTableTwo = [
+  createDataTableTwo("011", "016", "20", "FaleMais 30", "R$ 0,0", "R$ 38,00"),
+  createDataTableTwo(
+    "011",
+    "017",
+    "80",
+    "FaleMais 60",
+    "R$ 37,40",
+    "R$ 136,00"
+  ),
+  createDataTableTwo(
+    "018",
+    "011",
+    "200",
+    "FaleMais 120",
+    "R$ 167,20",
+    "R$ 380,00"
+  ),
 ];
 
 function Informations() {
@@ -45,52 +79,30 @@ function Informations() {
           <h2>Plano Normal</h2>
 
           <div className="container-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Origem (DDD)</th>
-                  <th>Destino (DDD)</th>
-                  <th>R$/minuto</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>011</td>
-                  <td>016</td>
-                  <td>1.90</td>
-                </tr>
-
-                <tr>
-                  <td>016</td>
-                  <td>011</td>
-                  <td>2.90</td>
-                </tr>
-
-                <tr>
-                  <td>011</td>
-                  <td>017</td>
-                  <td>1.70</td>
-                </tr>
-
-                <tr>
-                  <td>017</td>
-                  <td>011</td>
-                  <td>2.70</td>
-                </tr>
-
-                <tr>
-                  <td>011</td>
-                  <td>018</td>
-                  <td>0.90</td>
-                </tr>
-
-                <tr>
-                  <td>018</td>
-                  <td>011</td>
-                  <td>1.90</td>
-                </tr>
-              </tbody>
-            </table>
+            <TableContainer component={Paper}>
+              <Table className={classes.table} aria-label="simple table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell align="center">Origem (DDD)</TableCell>
+                    <TableCell align="center">Destino (DDD)</TableCell>
+                    <TableCell align="center">R$/Minuto</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rowsTableOne.map((rowsTableOne) => (
+                    <TableRow>
+                      <TableCell align="center">
+                        {rowsTableOne.origin}
+                      </TableCell>
+                      <TableCell align="center">
+                        {rowsTableOne.destiny}
+                      </TableCell>
+                      <TableCell align="center">{rowsTableOne.price}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
 
             <div className="text-description">
               <p>
@@ -133,25 +145,29 @@ function Informations() {
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell> Origem </TableCell>
-                  <TableCell align="right">Destino</TableCell>
-                  <TableCell align="right">Tempo</TableCell>
-                  <TableCell align="right">Plano FaleMais</TableCell>
-                  <TableCell align="right">Com FaleMais</TableCell>
-                  <TableCell align="right">Sem FaleMais</TableCell>
+                  <TableCell align="center">Origem</TableCell>
+                  <TableCell align="center">Destino</TableCell>
+                  <TableCell align="center">Tempo</TableCell>
+                  <TableCell align="center">Plano FaleMais</TableCell>
+                  <TableCell align="center">Com FaleMais</TableCell>
+                  <TableCell align="center">Sem FaleMais</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
-                  <TableRow key={row.origin}>
-                    <TableCell component="th" scope="row">
-                      {row.origin}
+                {rowsTableTwo.map((rowsTableTwo) => (
+                  <TableRow key={rowsTableTwo.time}>
+                    <TableCell align="center">{rowsTableTwo.origin}</TableCell>
+                    <TableCell align="center">{rowsTableTwo.destiny}</TableCell>
+                    <TableCell align="center">{rowsTableTwo.time}</TableCell>
+                    <TableCell align="center">
+                      {rowsTableTwo.planTalkPlus}
                     </TableCell>
-                    <TableCell align="right">{row.destiny}</TableCell>
-                    <TableCell align="right">{row.time}</TableCell>
-                    <TableCell align="right">{row.planTalkPlus}</TableCell>
-                    <TableCell align="right">{row.priceWith}</TableCell>
-                    <TableCell align="right">{row.priceWithout}</TableCell>
+                    <TableCell align="center">
+                      {rowsTableTwo.priceWith}
+                    </TableCell>
+                    <TableCell align="center">
+                      {rowsTableTwo.priceWithout}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -160,7 +176,7 @@ function Informations() {
 
           <div className="button">
             <Link to="/calculate" className="calculate">
-              <PlayArrowIcon style={{fontSize: 40}}/>
+              <PlayArrowIcon style={{ fontSize: 40 }} />
               Calcular
             </Link>
           </div>
