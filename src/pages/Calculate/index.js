@@ -61,7 +61,7 @@ export default class Calculate extends React.Component {
               </option>
               <option value="30">FaleMais 30</option>
               <option value="60">FaleMais 60</option>
-              <option value="120">FaleMais 120</option>
+              <option value="120">FaleMais 120</option>creation form page information
             </select>
           </div>
           <button type="submit">Calcular</button>
