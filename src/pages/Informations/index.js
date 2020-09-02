@@ -76,11 +76,13 @@ function Informations() {
 
       <div id="page-informations">
         <section className="section-container">
-          <h2>Plano Normal</h2>
+          <div className="title-section">
+            <h2>Plano Normal</h2>
+          </div>
 
           <div className="container-table">
             <TableContainer component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
+              <Table>
                 <TableHead>
                   <TableRow>
                     <TableCell align="center">Origem (DDD)</TableCell>
@@ -116,29 +118,25 @@ function Informations() {
         </section>
 
         <section className="section-container">
-          <div className="row">
-            <div className="col-12 col-md-12 title-plano-plus">
-              <h2>Plano Fale Mais</h2>
-            </div>
+          <div className="title-section">
+            <h2>Plano Fale Mais</h2>
           </div>
 
-          <div className="row">
-            <div className="text-description">
-              <p>
-                Com o Plano FaleMais da Telzir, o cliente adquire um plano e
-                pode falar de graça até um determinado tempo (em minutos) e só
-                paga os minutos excedentes economizando dinheiro e falando mais.
-                Os minutos excedentes tem apenas um acréscimo de 10% sobre a
-                tarifa normal do minuto. Os planos são FaleMais 30 (30 minutos),
-                FaleMais 60 (60 minutos) e FaleMais 120 (120 minutos).
-              </p>
-            </div>
+          <div className="text-description">
+            <p>
+              Com o Plano FaleMais da Telzir, o cliente adquire um plano e pode
+              falar de graça até um determinado tempo (em minutos) e só paga os
+              minutos excedentes economizando dinheiro e falando mais. Os
+              minutos excedentes tem apenas um acréscimo de 10% sobre a tarifa
+              normal do minuto. Os planos são FaleMais 30 (30 minutos), FaleMais
+              60 (60 minutos) e FaleMais 120 (120 minutos).
+            </p>
           </div>
         </section>
 
         <section className="container section-container">
-          <div className="title-plano-table">
-            <h2>Comparações: Fale Mais/Normal </h2>
+          <div className="title-section">
+            <h2>Comparação: Planos</h2>
           </div>
 
           <TableContainer component={Paper}>

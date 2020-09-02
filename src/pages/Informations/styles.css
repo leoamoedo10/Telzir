@@ -5,22 +5,22 @@
 }
 
 .container-table {
-  flex-direction: row;
-  display: flex;
+  /* flex-direction: row; */
+  /* display: flex; */
   justify-content: space-between;
   margin-left: 10rem;
   margin-right: 10rem;
 }
 
-.text-description p {
-  border-left: 0.3rem solid var(--color-primary-darker);
-  padding-left: 0.5rem;
-  font-size: 18px;
-}
-
 .section-container {
   margin-top: 4rem;
   padding: 2rem;
+}
+
+.text-description p {
+  border-left: 0.3rem solid var(--color-primary-darker);
+  padding-left: 0.5rem;
+  font: 400 1.1rem Roboto;
 }
 
 .section-container h2{

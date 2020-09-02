@@ -18,7 +18,7 @@
 
 .title-container {
   color: var(--color-title-in-primary);
-  font-size: 70px;
+  font: 700 4.6rem Archivo;
 }
 
 .buttons-container {
@@ -35,7 +35,7 @@
   text-decoration: none;
   color: var(--color-button-text);
   font-size: 2rem;
-  font-weight: bold;
+  font: 700 1.6rem Archivo;;
 
   display: flex;
   align-items: center;
