@@ -5,37 +5,26 @@
 }
 
 .container-table {
-  /* flex-direction: row; */
-  /* display: flex; */
-  justify-content: space-between;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  display: flex;
+  column-gap: 2rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
 }
 
 .section-container {
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 2rem;
 }
 
-.text-description p {
+.text-description {
   border-left: 0.3rem solid var(--color-primary-darker);
   padding-left: 0.5rem;
   font: 400 1.1rem Roboto;
 }
 
 .section-container h2{
-  padding:18px;
   text-align:center;
-  font-weight:bold;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-
-.format-table {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .button {
@@ -51,8 +40,8 @@
   margin-right: 1rem;
   text-decoration: none;
   color: var(--color-button-text);
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.7rem;
+  font-weight: 700;
 
   display: flex;
   align-items: center;

@@ -19,8 +19,8 @@
   color: var(--color-text-title);
 }
 
-/* .page-header {
+.page-header {
   width: 100%;
   margin: 0 auto;
   position: relative;
-} */
+}

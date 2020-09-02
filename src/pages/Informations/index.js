@@ -107,12 +107,10 @@ function Informations() {
             </TableContainer>
 
             <div className="text-description">
-              <p>
-                No plano normal da Telzir, o cliente pode fazer uma chamada de
-                uma cidade para outra pagando uma tarifa fixa por minuto, com o
-                preço sendo pré-definido em uma lista com os códigos DDDs de
-                origem e destino.
-              </p>
+              No plano normal da Telzir, o cliente pode fazer uma chamada de uma
+              cidade para outra pagando uma tarifa fixa por minuto, com o preço
+              sendo pré-definido em uma lista com os códigos DDDs de origem e
+              destino.
             </div>
           </div>
         </section>
@@ -136,7 +134,7 @@ function Informations() {
 
         <section className="container section-container">
           <div className="title-section">
-            <h2>Comparação: Planos</h2>
+            <h2>Comparação entre Planos</h2>
           </div>
 
           <TableContainer component={Paper}>
