@@ -5,21 +5,18 @@ import PageHeader from "../../components/PageHeader";
 import "./styles.css";
 
 export default class Calculate extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    alert("Seu sabor favorito é: " + this.state.value);
+  submitForm = (event) => {  
     event.preventDefault();
+
+    if (Number(this.inputOrigin.value) === this.inputDestiny.value) {
+      alert('O campo Origem não pode ser igual ao campo Destino!');
+    } if (Number(this.inputTime.value) < 0) {
+      alert('O campo Minutos não pode ser negativo. Tente novamente!');
+    } else {
+      alert('Funcionou!');
+    }
+
   }
 
   render() {
@@ -28,9 +25,9 @@ export default class Calculate extends React.Component {
         <div>
           <PageHeader />
         </div>
-        <form onSubmit={this.handleSubmit} className="calcule">
+        <form onSubmit={this.submitForm} className="calcule">
           <div className="select-block">
-            <select value="" required>
+            <select ref={(input) => this.inputOrigin = input} required>
               <option value="" disabled hidden>
                 Origem (DDD)
               </option>
@@ -40,7 +37,7 @@ export default class Calculate extends React.Component {
               <option value="018">018</option>
             </select>
 
-            <select value="" required>
+            <select ref={(input) => this.inputDestiny = input} required>
               <option value="" disabled hidden>
                 Destino (DDD)
               </option>
@@ -52,16 +49,16 @@ export default class Calculate extends React.Component {
 
             <div className="input-block">
               <label>Minutos de ligação</label>
-              <input type="number" />
+              <input type="number" ref={(input) => {this.inputTime = input}} required/>
             </div>
 
-            <select value="" required>
+            <select ref={(input) => this.inputPlan = input} required>
               <option value="" disabled hidden>
                 Plano FaleMais
               </option>
               <option value="30">FaleMais 30</option>
               <option value="60">FaleMais 60</option>
-              <option value="120">FaleMais 120</option>creation form page information
+              <option value="120">FaleMais 120</option>
             </select>
           </div>
           <button type="submit">Calcular</button>
