@@ -14,7 +14,7 @@ class PageResults extends React.Component {
     } = this.props.params;
 
     return (
-      <article className="teacher-item">
+      <article className="page-results">
         <header>
           <div>
             <p>
