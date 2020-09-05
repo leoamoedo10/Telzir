@@ -1,11 +1,17 @@
 import React from "react";
 
 import PageHeader from "../../components/PageHeader";
+import PageResults from '../../components/PageResults';
 import { planNormal, planPlus } from "./calculation";
 
 import "./styles.css";
 
 export default class Calculate extends React.Component {
+
+  state = {
+    params: [],
+  }
+
   submitForm = (e) => {
     e.preventDefault();
 
@@ -14,7 +20,6 @@ export default class Calculate extends React.Component {
     } else if (Number(this.inputTime.value) < 0) {
       alert("O campo Minutos não pode ser negativo. Tente novamente!");
     } else {
-      alert("Funcionou!");
       let origin = Number(this.inputOrigin.value);
       let destiny = Number(this.inputDestiny.value);
       let plan = Number(this.inputPlan.value);
@@ -22,7 +27,9 @@ export default class Calculate extends React.Component {
 
       let valuePlanNormal = planNormal(origin, destiny, time);
       let valuePlanPlus = planPlus(origin, destiny, plan, time);
-      console.log(origin, destiny, plan, time, valuePlanNormal, valuePlanPlus);
+      
+      let obj = {origin, destiny, plan, time, valuePlanNormal, valuePlanPlus};
+      this.setState({params: [obj] });
     }
   };
 
@@ -97,16 +104,13 @@ export default class Calculate extends React.Component {
             <button type="submit">Calcular</button>
           </form>
 
-          {/* <div>
-            <ul>
-              <li>{}</li>
-              <li>{}</li>
-              <li>{}</li>
-              <li>{}</li>
-              <li>{}</li>
-              <li>{}</li>
-            </ul>
-          </div> */}
+          <main>
+            {this.state.params.map((p) => {
+              return (
+                <PageResults params={p} />
+              )
+            })}
+          </main>
         </div>
       </>
     );

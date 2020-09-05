@@ -4,19 +4,19 @@
   border-radius: 0.4rem;
 }
 
-.container-table {
-  display: flex;
-  column-gap: 2rem;
-  margin-left: 15rem;
-  margin-right: 15rem;
-}
-
 .section-container {
   margin-top: 2rem;
   padding: 2rem;
 }
 
+.container-table {
+  margin: 1rem;
+  display: flex;
+  column-gap: 2rem;
+}
+
 .text-description {
+  display: flex;
   border-left: 0.3rem solid var(--color-primary-darker);
   padding-left: 0.5rem;
   font: 400 1.1rem Roboto;

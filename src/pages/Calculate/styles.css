@@ -8,6 +8,8 @@
 .calcule {
   display: flex;
   flex-wrap: wrap;
+
+  justify-content: center;
 }
 
 .select-block, .input-block{
@@ -15,7 +17,7 @@
   flex-direction: column;
 }
 
-.select-block {
+.select-block, .input-block {
   padding: 1rem;
 }
 
@@ -25,7 +27,7 @@
 }
 
 .select-block select, .input-block input {
-  width: 20rem;
+  width: 19rem;
   height: 5rem;
   margin-top: 0.8rem;
   border-radius: 0.5rem;
@@ -36,8 +38,10 @@
 }
 
 .calcule button {
-  width: 20rem;
-  height: 5rem;
+  width: 19rem;
+  height: 4.9rem;
+  margin: 1rem;
+  margin-top: 4rem;
   background: var(--color-secundary);
   color: var(--color-button-text);
   border: 0;
@@ -45,12 +49,17 @@
   cursor: pointer;
   font: 700 1.6rem Archivo;
   text-decoration: none;
-  margin-top: 3rem;
 
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .calcule button:hover {
   background: var(--color-secundary-dark);
+}
+
+#page-calculate main {
+  margin: 3.2rem auto;
+  width: 90%;
 }

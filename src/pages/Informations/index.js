@@ -117,7 +117,7 @@ function Informations() {
 
         <section className="section-container">
           <div className="title-section">
-            <h2>Plano Fale Mais</h2>
+            <h2>Plano FaleMais</h2>
           </div>
 
           <div className="text-description">
